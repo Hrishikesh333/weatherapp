@@ -3,13 +3,15 @@ import 'package:http/http.dart' as http;
 import '../models/weather_model.dart';
 
 class WeatherService {
-  static const _apiKey = '96e4f153ce5f7be002ad49c1f83dcf58';
+  static const _apiKey = '5307de9d3e1efbca843a01d5cb569f40';
 // 👈 Replace with your actual API key
   static const _baseUrl =
-      'https://api.openweathermap.org/data/2.5/weather?q=London&appid=your_real_api_key_here&units=metric';
+      'https://api.openweathermap.org/data/2.5/weather';
 
   Future<Weather> fetchWeatherByCity(String city) async {
     final url = '$_baseUrl?q=$city&appid=$_apiKey&units=metric';
+
+
 
     print("🔍 Fetching weather for city: $city");
 
